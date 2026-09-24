@@ -5,14 +5,9 @@ import (
 )
 
 func main() {
-	store := NewStore()
-	store.Set("key1", "value1")
-	store.Delete("key1")
-	val, err := store.Get("key1")
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(val)
+	store := NewStore(20)
+	store.Set("a", "42")
+	store.Set("b", "7")
 
 	fmt.Printf("GoKV - Go key value store project")
 }
